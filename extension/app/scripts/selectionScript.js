@@ -63,13 +63,15 @@ chrome.runtime.sendMessage({
   console.log('Got response:', response.username, response.groups, response.destUrl);
   username = response.username;
   serverUrl = response.destUrl;
-
+  if(response.groups === null) groupsObj = {};
   groupsObj = JSON.parse(response.groups);
 
   for (var key in groupsObj) {
-    groupsSelected.push(key);
+    if(groupsObj[key] === true) groupsSelected.push(key);
   }
 
+  //globalGroups = groupsSelected;
+  /*
   $.ajax({
     type: 'GET',
     url: serverUrl + '/test/users/groups',
@@ -82,7 +84,8 @@ chrome.runtime.sendMessage({
       }
       markupIds.forEach((id) => getComments(id));
     },
-  })
+  });
+  */
 });
 
 
@@ -212,9 +215,19 @@ var numbers = [0,1,2,3,4]
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   // Note: the selection property comes from the background script
+  console.log('!!');
   var allSelections = request.selection;
+  allSelections.sort(function(b,a) {
+    if(JSON.parse(a.anchor).editableElementIndex === JSON.parse(b.anchor).editableElementIndex) {
+      //flip = !flip;
+      return JSON.parse(a.anchor).start - JSON.parse(b.anchor).start;
+    } else {
+      //flip = !flip;
+      return JSON.parse(a.anchor).editableElementIndex - JSON.parse(b.anchor).editableElementIndex;
+    }
+  });
+  console.log('allSelections', allSelections);
   var username = request.username;
-  console.log('allSelections', allSelections, request.text);
   for (var i = 0; i < allSelections.length; i++) {
     if (!userSet[allSelections[i].author]) {
       userSet[allSelections[i].author] = numbers.splice(0,1);
