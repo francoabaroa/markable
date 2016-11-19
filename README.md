@@ -2,7 +2,7 @@
 
 ## App
 
-> Markup and share any html page on the web
+> a Google Chrome Extention to help you markup any html page on the web and share with your group of family and friends
 
 ## Team
 
