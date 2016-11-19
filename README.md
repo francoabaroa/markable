@@ -27,13 +27,12 @@
 Start local database:
 
 ```sh
-mongod
+
 ```
 
 From within the root directory:
 
 ```sh
-./node_modules/.bin/webpack -d
 npm start
 ```
 
@@ -46,7 +45,7 @@ Head to local host: [127.0.0.1:3000](http://127.0.0.1:3000)
 
 ## Documentation
 
-[Get Started Here] (https://francoabaroa.github.io/)
+[Get Started Here]
 
 ## Requirements
 
