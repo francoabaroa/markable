@@ -2,7 +2,7 @@
 
 ## App
 
-> a Google Chrome Extention to help you markup any html page on the web and share with your group of family and friends
+> A Google Chrome Extention to help you markup any html page on the web and share with your group of family and friends
 
 
 ## Team
@@ -48,7 +48,7 @@ Head to local host: [127.0.0.1:3000](http://127.0.0.1:3000)
 ## Requirements
 
 - Node
-- PosgreSQL
+- PostgreSQL
 
 ## Documentation
 
