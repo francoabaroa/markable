@@ -4,7 +4,6 @@
 
 > a Google Chrome Extention to help you markup any html page on the web and share with your group of family and friends
 
-[//]: # (This may be the most platform independent comment)
 
 ## Team
 
@@ -86,7 +85,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
 </p>
 
 
-
+[//]: # (This may be the most platform independent comment
 [![Stories in Ready](https://badge.waffle.io/unexpectedreboots/unexpectedreboots.png?label=ready&title=Ready)](https://waffle.io/unexpectedreboots/unexpectedreboots)
 *extension
 
@@ -152,3 +151,4 @@ GRANT ALL ON comments TO postgres;
 ```sh
 ALTER USER postgres WITH SUPERUSER;
 ```
+)
