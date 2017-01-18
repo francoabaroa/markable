@@ -4,6 +4,8 @@
 
 > a Google Chrome Extention to help you markup any html page on the web and share with your group of family and friends
 
+[//]: # (This may be the most platform independent comment)
+
 ## Team
 
   - __Product Owner__: Lucas Becker
